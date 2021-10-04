@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
-    <Folder Include="DemoPages\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Aura.UI" Version="0.1.4-preview1" />
@@ -15,5 +14,8 @@
     <PackageReference Include="Avalonia.Desktop" Version="0.10.7" />
     <PackageReference Include="Avalonia.Diagnostics" Version="0.10.7" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.7" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TimsAvaloniaControls\TimsAvaloniaControls.csproj" />
   </ItemGroup>
 </Project>
