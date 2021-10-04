@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+			 xmlns:conv="using:TimsAvaloniaControls.Converters"
+             x:Class="DemoApp.DemoPages.ObjectEqualsToBooleanConverter">
+	<ScrollViewer>
+		<StackPanel Spacing="10">
+
+			<TextBlock Classes="h1 wrap" Text="Object Equals To Boolean Converter" />
+			
+			<TextBlock Classes="wrap">Type some text in the below TextBox and notice how the below TextBlocks disappear.</TextBlock>
+			<TextBox Name="MagicInput" />
+
+			<TextBlock Text="Test" 
+					   IsVisible="{Binding #MagicInput.Text, Converter={x:Static conv:ObjectEqualsToBooleanConverter.InstanceInverted}, ConverterParameter='Test'}" />
+
+			<TextBlock Text="abc"
+					   IsVisible="{Binding #MagicInput.Text, Converter={x:Static conv:ObjectEqualsToBooleanConverter.InstanceInverted}, ConverterParameter='abc'}" />
+
+			<TextBlock Text="def"
+					   IsVisible="{Binding #MagicInput.Text, Converter={x:Static conv:ObjectEqualsToBooleanConverter.InstanceInverted}, ConverterParameter='def'}" />
+
+			<TextBlock Text="ghi"
+					   IsVisible="{Binding #MagicInput.Text, Converter={x:Static conv:ObjectEqualsToBooleanConverter.InstanceInverted}, ConverterParameter='ghi'}" />
+		</StackPanel>
+
+	</ScrollViewer>
+</UserControl>

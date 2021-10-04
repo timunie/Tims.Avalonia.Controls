@@ -9,5 +9,8 @@
     <Application.Styles>
         <FluentTheme Mode="Light"/>
 		<StyleInclude Source="avares://Aura.UI/AuraUIFluent.xaml" />
+
+		<!--Local Styles-->
+		<StyleInclude Source="/Styles/TextBlock.axaml" />
     </Application.Styles>
 </Application>

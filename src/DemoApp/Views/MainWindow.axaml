@@ -3,6 +3,7 @@
         xmlns:vm="using:DemoApp.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:dp="using:DemoApp.DemoPages"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DemoApp.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
@@ -14,6 +15,9 @@
 
 	<TabControl TabStripPlacement="Left">
 		<TabItem Header="Welcome" Content="Welcome :-)" />
+		<TabItem Header="EqualToBoolCoverter" >
+			<dp:ObjectEqualsToBooleanConverter />
+		</TabItem>
 	</TabControl>
 
 	
