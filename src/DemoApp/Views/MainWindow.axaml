@@ -15,9 +15,15 @@
 
 	<TabControl TabStripPlacement="Left">
 		<TabItem Header="Welcome" Content="Welcome :-)" />
+		
 		<TabItem Header="EqualToBoolCoverter" >
 			<dp:ObjectEqualsToBooleanConverter />
 		</TabItem>
+		
+		<TabItem Header="ColorToTran.Col.Converter" >
+			<dp:ColorToTransparencyColorConverter />
+		</TabItem>
+		
 	</TabControl>
 
 	
