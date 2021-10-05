@@ -1,0 +1,98 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:dialog="clr-namespace:Egorozh.ColorPicker.Dialog;assembly=Egorozh.ColorPicker.Avalonia.Dialog"
+			 xmlns:conv="using:TimsAvaloniaControls.Converters"
+			 xmlns:cp="using:Egorozh.ColorPicker"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="DemoApp.DemoPages.ColorToTransparencyColorConverter">
+	<ScrollViewer>
+		<StackPanel Spacing="10">
+			<TextBlock Classes="h1">Color To Transparency Color Converter</TextBlock>
+			<TextBlock Classes="wrap">
+				Takes a Color as value and the ConverterParameter as transparenncy level and returns a transparenter color back. The Converter paramter must be between 0.0 an 1.0 where 0.0 is not tranparent at all and 1.0 is fully transparent.
+			</TextBlock>
+
+			<cp:ColorPickerControl Name="ColorPicker" HorizontalAlignment="Center" Color="Yellow"/>
+
+			<UniformGrid Rows="3" Columns="3" Width="300" HorizontalAlignment="Center"  >
+
+				<UniformGrid.Styles>
+					<Style Selector="TextBlock" >
+						<Setter Property="HorizontalAlignment" Value="Center" />
+						<Setter Property="VerticalAlignment" Value="Center" />
+					</Style>
+					<Style Selector="Border">
+						<Setter Property="Margin" Value="5" />
+						<Setter Property="CornerRadius" Value="5" />
+					</Style>
+				</UniformGrid.Styles>
+				
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.1}" />
+					</Border.Background>
+					<TextBlock Text="10 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.2}" />
+					</Border.Background>
+					<TextBlock Text="20 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.3}" />
+					</Border.Background>
+					<TextBlock Text="30 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.4}" />
+					</Border.Background>
+					<TextBlock Text="40 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.5}" />
+					</Border.Background>
+					<TextBlock Text="50 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.6}" />
+					</Border.Background>
+					<TextBlock Text="60 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.7}" />
+					</Border.Background>
+					<TextBlock Text="70 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.8}" />
+					</Border.Background>
+					<TextBlock Text="80 %" Background="White" />
+				</Border>
+
+				<Border Height="{Binding $self.Bounds.Width}">
+					<Border.Background>
+						<SolidColorBrush Color="{Binding #ColorPicker.Color, Converter={x:Static conv:ColorToTransparencyColorConverter.Instance}, ConverterParameter=0.9}" />
+					</Border.Background>
+					<TextBlock Text="90 %" Background="White" />
+				</Border>
+			</UniformGrid>
+			
+		</StackPanel>
+	</ScrollViewer>
+</UserControl>
